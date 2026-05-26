@@ -2701,9 +2701,13 @@ public enum STIXObservable: Codable, Sendable, Equatable {
     case x509Certificate(X509Certificate)
     case custom(CustomObservable)
 
+    enum CodingKeys: String, CodingKey {
+        case type
+    }
+
     public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: DynamicCodingKey.self)
-        let type = try container.decode(String.self, forKey: DynamicCodingKey("type"))
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(String.self, forKey: .type)
         switch type {
         case Artifact.stixType:
             self = .artifact(try Artifact(from: decoder))
@@ -2889,9 +2893,13 @@ public enum STIXObject: Codable, Sendable, Equatable {
     case extensionDefinition(ExtensionDefinition)
     case custom(CustomObject)
 
+    enum CodingKeys: String, CodingKey {
+        case type
+    }
+
     public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: DynamicCodingKey.self)
-        let type = try container.decode(String.self, forKey: DynamicCodingKey("type"))
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(String.self, forKey: .type)
         switch type {
         case AttackPattern.stixType:
             self = .attackPattern(try AttackPattern(from: decoder))
