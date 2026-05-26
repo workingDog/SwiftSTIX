@@ -4,7 +4,7 @@ import Foundation
 public struct AttackPattern: STIXObjectProtocol, Equatable {
     public static let stixType = "attack-pattern"
     public var type: String = "attack-pattern"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -22,7 +22,7 @@ public struct AttackPattern: STIXObjectProtocol, Equatable {
     public var description: String?
     public var killChainPhases: [KillChainPhase]?
 
-    public init(type: String = "attack-pattern", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, aliases: [String]? = nil, name: String, description: String? = nil, killChainPhases: [KillChainPhase]? = nil) {
+    public init(type: String = "attack-pattern", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, aliases: [String]? = nil, name: String, description: String? = nil, killChainPhases: [KillChainPhase]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -69,7 +69,7 @@ public struct AttackPattern: STIXObjectProtocol, Equatable {
 public struct Campaign: STIXObjectProtocol, Equatable {
     public static let stixType = "campaign"
     public var type: String = "campaign"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -89,7 +89,7 @@ public struct Campaign: STIXObjectProtocol, Equatable {
     public var lastSeen: Date?
     public var objective: String?
 
-    public init(type: String = "campaign", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, aliases: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, objective: String? = nil) {
+    public init(type: String = "campaign", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, aliases: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, objective: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -140,7 +140,7 @@ public struct Campaign: STIXObjectProtocol, Equatable {
 public struct CourseOfAction: STIXObjectProtocol, Equatable {
     public static let stixType = "course-of-action"
     public var type: String = "course-of-action"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -156,7 +156,7 @@ public struct CourseOfAction: STIXObjectProtocol, Equatable {
     public var name: String
     public var description: String?
 
-    public init(type: String = "course-of-action", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil) {
+    public init(type: String = "course-of-action", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -199,7 +199,7 @@ public struct CourseOfAction: STIXObjectProtocol, Equatable {
 public struct Grouping: STIXObjectProtocol, Equatable {
     public static let stixType = "grouping"
     public var type: String = "grouping"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -217,7 +217,7 @@ public struct Grouping: STIXObjectProtocol, Equatable {
     public var context: String
     public var objectRefs: [STIXIdentifier]
 
-    public init(type: String = "grouping", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String? = nil, description: String? = nil, context: String, objectRefs: [STIXIdentifier]) {
+    public init(type: String = "grouping", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String? = nil, description: String? = nil, context: String, objectRefs: [STIXIdentifier]) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -264,7 +264,7 @@ public struct Grouping: STIXObjectProtocol, Equatable {
 public struct Identity: STIXObjectProtocol, Equatable {
     public static let stixType = "identity"
     public var type: String = "identity"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -284,7 +284,7 @@ public struct Identity: STIXObjectProtocol, Equatable {
     public var sectors: [String]?
     public var contactInformation: String?
 
-    public init(type: String = "identity", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, roles: [String]? = nil, name: String, description: String? = nil, identityClass: String? = nil, sectors: [String]? = nil, contactInformation: String? = nil) {
+    public init(type: String = "identity", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, roles: [String]? = nil, name: String, description: String? = nil, identityClass: String? = nil, sectors: [String]? = nil, contactInformation: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -335,7 +335,7 @@ public struct Identity: STIXObjectProtocol, Equatable {
 public struct Incident: STIXObjectProtocol, Equatable {
     public static let stixType = "incident"
     public var type: String = "incident"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -351,7 +351,7 @@ public struct Incident: STIXObjectProtocol, Equatable {
     public var name: String
     public var description: String?
 
-    public init(type: String = "incident", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil) {
+    public init(type: String = "incident", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -394,7 +394,7 @@ public struct Incident: STIXObjectProtocol, Equatable {
 public struct Indicator: STIXObjectProtocol, Equatable {
     public static let stixType = "indicator"
     public var type: String = "indicator"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -417,7 +417,7 @@ public struct Indicator: STIXObjectProtocol, Equatable {
     public var validUntil: Date?
     public var killChainPhases: [KillChainPhase]?
 
-    public init(type: String = "indicator", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, indicatorTypes: [String]? = nil, name: String? = nil, description: String? = nil, pattern: String, patternType: String, patternVersion: String? = nil, validFrom: Date, validUntil: Date? = nil, killChainPhases: [KillChainPhase]? = nil) {
+    public init(type: String = "indicator", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, indicatorTypes: [String]? = nil, name: String? = nil, description: String? = nil, pattern: String, patternType: String, patternVersion: String? = nil, validFrom: Date, validUntil: Date? = nil, killChainPhases: [KillChainPhase]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -474,7 +474,7 @@ public struct Indicator: STIXObjectProtocol, Equatable {
 public struct Infrastructure: STIXObjectProtocol, Equatable {
     public static let stixType = "infrastructure"
     public var type: String = "infrastructure"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -495,7 +495,7 @@ public struct Infrastructure: STIXObjectProtocol, Equatable {
     public var firstSeen: Date?
     public var lastSeen: Date?
 
-    public init(type: String = "infrastructure", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, infrastructureTypes: [String]? = nil, aliases: [String]? = nil, killChainPhases: [KillChainPhase]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil) {
+    public init(type: String = "infrastructure", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, infrastructureTypes: [String]? = nil, aliases: [String]? = nil, killChainPhases: [KillChainPhase]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -548,7 +548,7 @@ public struct Infrastructure: STIXObjectProtocol, Equatable {
 public struct IntrusionSet: STIXObjectProtocol, Equatable {
     public static let stixType = "intrusion-set"
     public var type: String = "intrusion-set"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -571,7 +571,7 @@ public struct IntrusionSet: STIXObjectProtocol, Equatable {
     public var primaryMotivation: String?
     public var secondaryMotivations: [String]?
 
-    public init(type: String = "intrusion-set", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, aliases: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, goals: [String]? = nil, resourceLevel: String? = nil, primaryMotivation: String? = nil, secondaryMotivations: [String]? = nil) {
+    public init(type: String = "intrusion-set", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, aliases: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, goals: [String]? = nil, resourceLevel: String? = nil, primaryMotivation: String? = nil, secondaryMotivations: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -628,7 +628,7 @@ public struct IntrusionSet: STIXObjectProtocol, Equatable {
 public struct Location: STIXObjectProtocol, Equatable {
     public static let stixType = "location"
     public var type: String = "location"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -653,7 +653,7 @@ public struct Location: STIXObjectProtocol, Equatable {
     public var streetAddress: String?
     public var postalCode: String?
 
-    public init(type: String = "location", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, description: String? = nil, name: String? = nil, latitude: Double? = nil, longitude: Double? = nil, precision: Double? = nil, region: String? = nil, country: String? = nil, administrativeArea: String? = nil, city: String? = nil, streetAddress: String? = nil, postalCode: String? = nil) {
+    public init(type: String = "location", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, description: String? = nil, name: String? = nil, latitude: Double? = nil, longitude: Double? = nil, precision: Double? = nil, region: String? = nil, country: String? = nil, administrativeArea: String? = nil, city: String? = nil, streetAddress: String? = nil, postalCode: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -714,7 +714,7 @@ public struct Location: STIXObjectProtocol, Equatable {
 public struct MalwareAnalysis: STIXObjectProtocol, Equatable {
     public static let stixType = "malware-analysis"
     public var type: String = "malware-analysis"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -744,7 +744,7 @@ public struct MalwareAnalysis: STIXObjectProtocol, Equatable {
     public var analysisScoRefs: [STIXIdentifier]?
     public var sampleRef: STIXIdentifier?
 
-    public init(type: String = "malware-analysis", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, product: String, version: String? = nil, configurationVersion: String? = nil, modules: [String]? = nil, analysisEngineVersion: String? = nil, analysisDefinitionVersion: String? = nil, submitted: Date? = nil, analysisStarted: Date? = nil, analysisEnded: Date? = nil, resultName: String? = nil, result: String? = nil, hostVmRef: STIXIdentifier? = nil, operatingSystemRef: STIXIdentifier? = nil, installedSoftwareRefs: [STIXIdentifier]? = nil, analysisScoRefs: [STIXIdentifier]? = nil, sampleRef: STIXIdentifier? = nil) {
+    public init(type: String = "malware-analysis", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, product: String, version: String? = nil, configurationVersion: String? = nil, modules: [String]? = nil, analysisEngineVersion: String? = nil, analysisDefinitionVersion: String? = nil, submitted: Date? = nil, analysisStarted: Date? = nil, analysisEnded: Date? = nil, resultName: String? = nil, result: String? = nil, hostVmRef: STIXIdentifier? = nil, operatingSystemRef: STIXIdentifier? = nil, installedSoftwareRefs: [STIXIdentifier]? = nil, analysisScoRefs: [STIXIdentifier]? = nil, sampleRef: STIXIdentifier? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -815,7 +815,7 @@ public struct MalwareAnalysis: STIXObjectProtocol, Equatable {
 public struct Malware: STIXObjectProtocol, Equatable {
     public static let stixType = "malware"
     public var type: String = "malware"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -842,7 +842,7 @@ public struct Malware: STIXObjectProtocol, Equatable {
     public var killChainPhases: [KillChainPhase]?
     public var isFamily: Bool
 
-    public init(type: String = "malware", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, aliases: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, operatingSystemRefs: [STIXIdentifier]? = nil, architectureExecutionEnvs: [String]? = nil, implementationLanguages: [String]? = nil, capabilities: [String]? = nil, sampleRefs: [String]? = nil, malwareTypes: [String]? = nil, name: String? = nil, description: String? = nil, killChainPhases: [KillChainPhase]? = nil, isFamily: Bool) {
+    public init(type: String = "malware", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, aliases: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, operatingSystemRefs: [STIXIdentifier]? = nil, architectureExecutionEnvs: [String]? = nil, implementationLanguages: [String]? = nil, capabilities: [String]? = nil, sampleRefs: [String]? = nil, malwareTypes: [String]? = nil, name: String? = nil, description: String? = nil, killChainPhases: [KillChainPhase]? = nil, isFamily: Bool) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -907,7 +907,7 @@ public struct Malware: STIXObjectProtocol, Equatable {
 public struct Note: STIXObjectProtocol, Equatable {
     public static let stixType = "note"
     public var type: String = "note"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -925,7 +925,7 @@ public struct Note: STIXObjectProtocol, Equatable {
     public var authors: [String]?
     public var objectRefs: [STIXIdentifier]
 
-    public init(type: String = "note", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, abstract: String? = nil, content: String, authors: [String]? = nil, objectRefs: [STIXIdentifier]) {
+    public init(type: String = "note", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, abstract: String? = nil, content: String, authors: [String]? = nil, objectRefs: [STIXIdentifier]) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -972,7 +972,7 @@ public struct Note: STIXObjectProtocol, Equatable {
 public struct ObservedData: STIXObjectProtocol, Equatable {
     public static let stixType = "observed-data"
     public var type: String = "observed-data"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -991,7 +991,7 @@ public struct ObservedData: STIXObjectProtocol, Equatable {
     public var objects: [String: STIXObservable]?
     public var objectRefs: [STIXIdentifier]?
 
-    public init(type: String = "observed-data", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, firstObserved: Date, lastObserved: Date, numberObserved: Int, objects: [String: STIXObservable]? = nil, objectRefs: [STIXIdentifier]? = nil) {
+    public init(type: String = "observed-data", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, firstObserved: Date, lastObserved: Date, numberObserved: Int, objects: [String: STIXObservable]? = nil, objectRefs: [STIXIdentifier]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1040,7 +1040,7 @@ public struct ObservedData: STIXObjectProtocol, Equatable {
 public struct Opinion: STIXObjectProtocol, Equatable {
     public static let stixType = "opinion"
     public var type: String = "opinion"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1058,7 +1058,7 @@ public struct Opinion: STIXObjectProtocol, Equatable {
     public var objectRefs: [STIXIdentifier]
     public var opinion: String
 
-    public init(type: String = "opinion", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, explanation: String? = nil, authors: [String]? = nil, objectRefs: [STIXIdentifier], opinion: String) {
+    public init(type: String = "opinion", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, explanation: String? = nil, authors: [String]? = nil, objectRefs: [STIXIdentifier], opinion: String) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1105,7 +1105,7 @@ public struct Opinion: STIXObjectProtocol, Equatable {
 public struct Report: STIXObjectProtocol, Equatable {
     public static let stixType = "report"
     public var type: String = "report"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1124,7 +1124,7 @@ public struct Report: STIXObjectProtocol, Equatable {
     public var published: Date
     public var objectRefs: [STIXIdentifier]
 
-    public init(type: String = "report", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, reportTypes: [String]? = nil, name: String, description: String? = nil, published: Date, objectRefs: [STIXIdentifier]) {
+    public init(type: String = "report", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, reportTypes: [String]? = nil, name: String, description: String? = nil, published: Date, objectRefs: [STIXIdentifier]) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1173,7 +1173,7 @@ public struct Report: STIXObjectProtocol, Equatable {
 public struct ThreatActor: STIXObjectProtocol, Equatable {
     public static let stixType = "threat-actor"
     public var type: String = "threat-actor"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1200,7 +1200,7 @@ public struct ThreatActor: STIXObjectProtocol, Equatable {
     public var secondaryMotivations: [String]?
     public var personalMotivations: [String]?
 
-    public init(type: String = "threat-actor", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, threatActorTypes: [String]? = nil, name: String, description: String? = nil, aliases: [String]? = nil, roles: [String]? = nil, goals: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, sophistication: String? = nil, resourceLevel: String? = nil, primaryMotivation: String? = nil, secondaryMotivations: [String]? = nil, personalMotivations: [String]? = nil) {
+    public init(type: String = "threat-actor", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, threatActorTypes: [String]? = nil, name: String, description: String? = nil, aliases: [String]? = nil, roles: [String]? = nil, goals: [String]? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, sophistication: String? = nil, resourceLevel: String? = nil, primaryMotivation: String? = nil, secondaryMotivations: [String]? = nil, personalMotivations: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1265,7 +1265,7 @@ public struct ThreatActor: STIXObjectProtocol, Equatable {
 public struct Tool: STIXObjectProtocol, Equatable {
     public static let stixType = "tool"
     public var type: String = "tool"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1285,7 +1285,7 @@ public struct Tool: STIXObjectProtocol, Equatable {
     public var toolVersion: String?
     public var killChainPhases: [KillChainPhase]?
 
-    public init(type: String = "tool", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, aliases: [String]? = nil, toolTypes: [String]? = nil, name: String, description: String? = nil, toolVersion: String? = nil, killChainPhases: [KillChainPhase]? = nil) {
+    public init(type: String = "tool", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, aliases: [String]? = nil, toolTypes: [String]? = nil, name: String, description: String? = nil, toolVersion: String? = nil, killChainPhases: [KillChainPhase]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1336,7 +1336,7 @@ public struct Tool: STIXObjectProtocol, Equatable {
 public struct Vulnerability: STIXObjectProtocol, Equatable {
     public static let stixType = "vulnerability"
     public var type: String = "vulnerability"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1352,7 +1352,7 @@ public struct Vulnerability: STIXObjectProtocol, Equatable {
     public var name: String
     public var description: String?
 
-    public init(type: String = "vulnerability", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil) {
+    public init(type: String = "vulnerability", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1395,7 +1395,7 @@ public struct Vulnerability: STIXObjectProtocol, Equatable {
 public struct Relationship: STIXObjectProtocol, Equatable {
     public static let stixType = "relationship"
     public var type: String = "relationship"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1415,7 +1415,7 @@ public struct Relationship: STIXObjectProtocol, Equatable {
     public var startTime: Date?
     public var stopTime: Date?
 
-    public init(type: String = "relationship", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, relationshipType: String, description: String? = nil, sourceRef: STIXIdentifier, targetRef: STIXIdentifier, startTime: Date? = nil, stopTime: Date? = nil) {
+    public init(type: String = "relationship", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, relationshipType: String, description: String? = nil, sourceRef: STIXIdentifier, targetRef: STIXIdentifier, startTime: Date? = nil, stopTime: Date? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1466,7 +1466,7 @@ public struct Relationship: STIXObjectProtocol, Equatable {
 public struct Sighting: STIXObjectProtocol, Equatable {
     public static let stixType = "sighting"
     public var type: String = "sighting"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -1488,7 +1488,7 @@ public struct Sighting: STIXObjectProtocol, Equatable {
     public var whereSightedRefs: [STIXIdentifier]?
     public var summary: Bool?
 
-    public init(type: String = "sighting", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, description: String? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, count: Int? = nil, sightingOfRef: STIXIdentifier, observedDataRefs: [STIXIdentifier]? = nil, whereSightedRefs: [STIXIdentifier]? = nil, summary: Bool? = nil) {
+    public init(type: String = "sighting", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, description: String? = nil, firstSeen: Date? = nil, lastSeen: Date? = nil, count: Int? = nil, sightingOfRef: STIXIdentifier, observedDataRefs: [STIXIdentifier]? = nil, whereSightedRefs: [STIXIdentifier]? = nil, summary: Bool? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -1543,7 +1543,7 @@ public struct Sighting: STIXObjectProtocol, Equatable {
 public struct Artifact: STIXObservableProtocol, Equatable {
     public static let stixType = "artifact"
     public var type: String = "artifact"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1556,7 +1556,7 @@ public struct Artifact: STIXObservableProtocol, Equatable {
     public var encryptionAlgorithm: STIXValue?
     public var decryptionKey: String?
 
-    public init(type: String = "artifact", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, mimeType: String? = nil, payloadBin: String? = nil, url: STIXValue? = nil, hashes: [String: STIXValue]? = nil, encryptionAlgorithm: STIXValue? = nil, decryptionKey: String? = nil) {
+    public init(type: String = "artifact", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, mimeType: String? = nil, payloadBin: String? = nil, url: STIXValue? = nil, hashes: [String: STIXValue]? = nil, encryptionAlgorithm: STIXValue? = nil, decryptionKey: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1593,7 +1593,7 @@ public struct Artifact: STIXObservableProtocol, Equatable {
 public struct AutonomousSystem: STIXObservableProtocol, Equatable {
     public static let stixType = "autonomous-system"
     public var type: String = "autonomous-system"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1603,7 +1603,7 @@ public struct AutonomousSystem: STIXObservableProtocol, Equatable {
     public var name: String?
     public var rir: String?
 
-    public init(type: String = "autonomous-system", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, number: Int, name: String? = nil, rir: String? = nil) {
+    public init(type: String = "autonomous-system", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, number: Int, name: String? = nil, rir: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1634,7 +1634,7 @@ public struct AutonomousSystem: STIXObservableProtocol, Equatable {
 public struct Directory: STIXObservableProtocol, Equatable {
     public static let stixType = "directory"
     public var type: String = "directory"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1647,7 +1647,7 @@ public struct Directory: STIXObservableProtocol, Equatable {
     public var atime: Date?
     public var containsRefs: [String]?
 
-    public init(type: String = "directory", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, path: String, pathEnc: String? = nil, ctime: Date? = nil, mtime: Date? = nil, atime: Date? = nil, containsRefs: [String]? = nil) {
+    public init(type: String = "directory", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, path: String, pathEnc: String? = nil, ctime: Date? = nil, mtime: Date? = nil, atime: Date? = nil, containsRefs: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1684,7 +1684,7 @@ public struct Directory: STIXObservableProtocol, Equatable {
 public struct DomainName: STIXObservableProtocol, Equatable {
     public static let stixType = "domain-name"
     public var type: String = "domain-name"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1693,7 +1693,7 @@ public struct DomainName: STIXObservableProtocol, Equatable {
     public var value: String
     public var resolvesToRefs: [String]?
 
-    public init(type: String = "domain-name", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, resolvesToRefs: [String]? = nil) {
+    public init(type: String = "domain-name", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, resolvesToRefs: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1722,7 +1722,7 @@ public struct DomainName: STIXObservableProtocol, Equatable {
 public struct EmailAddr: STIXObservableProtocol, Equatable {
     public static let stixType = "email-addr"
     public var type: String = "email-addr"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1732,7 +1732,7 @@ public struct EmailAddr: STIXObservableProtocol, Equatable {
     public var displayName: String?
     public var belongsToRef: String?
 
-    public init(type: String = "email-addr", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, displayName: String? = nil, belongsToRef: String? = nil) {
+    public init(type: String = "email-addr", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, displayName: String? = nil, belongsToRef: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1763,7 +1763,7 @@ public struct EmailAddr: STIXObservableProtocol, Equatable {
 public struct EmailMessage: STIXObservableProtocol, Equatable {
     public static let stixType = "email-message"
     public var type: String = "email-message"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1785,7 +1785,7 @@ public struct EmailMessage: STIXObservableProtocol, Equatable {
     public var body: String?
     public var bodyMultipart: [STIXValue]?
 
-    public init(type: String = "email-message", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, date: Date? = nil, contentType: String? = nil, fromRef: String? = nil, senderRef: String? = nil, toRefs: [String]? = nil, ccRefs: [String]? = nil, bccRefs: [String]? = nil, messageId: String? = nil, subject: String? = nil, receivedLines: [String]? = nil, additionalHeaderFields: STIXValue? = nil, rawEmailRef: String? = nil, isMultipart: Bool? = nil, body: String? = nil, bodyMultipart: [STIXValue]? = nil) {
+    public init(type: String = "email-message", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, date: Date? = nil, contentType: String? = nil, fromRef: String? = nil, senderRef: String? = nil, toRefs: [String]? = nil, ccRefs: [String]? = nil, bccRefs: [String]? = nil, messageId: String? = nil, subject: String? = nil, receivedLines: [String]? = nil, additionalHeaderFields: STIXValue? = nil, rawEmailRef: String? = nil, isMultipart: Bool? = nil, body: String? = nil, bodyMultipart: [STIXValue]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1840,7 +1840,7 @@ public struct EmailMessage: STIXObservableProtocol, Equatable {
 public struct File: STIXObservableProtocol, Equatable {
     public static let stixType = "file"
     public var type: String = "file"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1859,7 +1859,7 @@ public struct File: STIXObservableProtocol, Equatable {
     public var containsRefs: [String]?
     public var contentRef: String?
 
-    public init(type: String = "file", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, hashes: [String: STIXValue]? = nil, size: Int? = nil, name: String? = nil, nameEnc: String? = nil, magicNumberHex: String? = nil, mimeType: String? = nil, ctime: Date? = nil, mtime: Date? = nil, atime: Date? = nil, parentDirectoryRef: String? = nil, containsRefs: [String]? = nil, contentRef: String? = nil) {
+    public init(type: String = "file", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, hashes: [String: STIXValue]? = nil, size: Int? = nil, name: String? = nil, nameEnc: String? = nil, magicNumberHex: String? = nil, mimeType: String? = nil, ctime: Date? = nil, mtime: Date? = nil, atime: Date? = nil, parentDirectoryRef: String? = nil, containsRefs: [String]? = nil, contentRef: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1908,7 +1908,7 @@ public struct File: STIXObservableProtocol, Equatable {
 public struct Ipv4Addr: STIXObservableProtocol, Equatable {
     public static let stixType = "ipv4-addr"
     public var type: String = "ipv4-addr"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1918,7 +1918,7 @@ public struct Ipv4Addr: STIXObservableProtocol, Equatable {
     public var resolvesToRefs: [String]?
     public var belongsToRefs: [String]?
 
-    public init(type: String = "ipv4-addr", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, resolvesToRefs: [String]? = nil, belongsToRefs: [String]? = nil) {
+    public init(type: String = "ipv4-addr", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, resolvesToRefs: [String]? = nil, belongsToRefs: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1949,7 +1949,7 @@ public struct Ipv4Addr: STIXObservableProtocol, Equatable {
 public struct Ipv6Addr: STIXObservableProtocol, Equatable {
     public static let stixType = "ipv6-addr"
     public var type: String = "ipv6-addr"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1959,7 +1959,7 @@ public struct Ipv6Addr: STIXObservableProtocol, Equatable {
     public var resolvesToRefs: [String]?
     public var belongsToRefs: [String]?
 
-    public init(type: String = "ipv6-addr", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, resolvesToRefs: [String]? = nil, belongsToRefs: [String]? = nil) {
+    public init(type: String = "ipv6-addr", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String, resolvesToRefs: [String]? = nil, belongsToRefs: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -1990,7 +1990,7 @@ public struct Ipv6Addr: STIXObservableProtocol, Equatable {
 public struct MacAddr: STIXObservableProtocol, Equatable {
     public static let stixType = "mac-addr"
     public var type: String = "mac-addr"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -1998,7 +1998,7 @@ public struct MacAddr: STIXObservableProtocol, Equatable {
     public var extensions: [String: STIXValue]?
     public var value: String
 
-    public init(type: String = "mac-addr", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String) {
+    public init(type: String = "mac-addr", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: String) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2025,7 +2025,7 @@ public struct MacAddr: STIXObservableProtocol, Equatable {
 public struct Mutex: STIXObservableProtocol, Equatable {
     public static let stixType = "mutex"
     public var type: String = "mutex"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2033,7 +2033,7 @@ public struct Mutex: STIXObservableProtocol, Equatable {
     public var extensions: [String: STIXValue]?
     public var name: String
 
-    public init(type: String = "mutex", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, name: String) {
+    public init(type: String = "mutex", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, name: String) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2060,7 +2060,7 @@ public struct Mutex: STIXObservableProtocol, Equatable {
 public struct NetworkTraffic: STIXObservableProtocol, Equatable {
     public static let stixType = "network-traffic"
     public var type: String = "network-traffic"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2084,7 +2084,7 @@ public struct NetworkTraffic: STIXObservableProtocol, Equatable {
     public var encapsulatedByRef: String?
     public var isActive: Bool?
 
-    public init(type: String = "network-traffic", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, start: Date? = nil, end: Date? = nil, srcRef: String? = nil, dstRef: String? = nil, srcPort: Int? = nil, dstPort: Int? = nil, protocols: [String], srcByteCount: Int? = nil, dstByteCount: Int? = nil, srcPackets: Int? = nil, dstPackets: Int? = nil, ipfix: [String: STIXValue]? = nil, srcPayloadRef: String? = nil, dstPayloadRef: String? = nil, encapsulatesRefs: [String]? = nil, encapsulatedByRef: String? = nil, isActive: Bool? = nil) {
+    public init(type: String = "network-traffic", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, start: Date? = nil, end: Date? = nil, srcRef: String? = nil, dstRef: String? = nil, srcPort: Int? = nil, dstPort: Int? = nil, protocols: [String], srcByteCount: Int? = nil, dstByteCount: Int? = nil, srcPackets: Int? = nil, dstPackets: Int? = nil, ipfix: [String: STIXValue]? = nil, srcPayloadRef: String? = nil, dstPayloadRef: String? = nil, encapsulatesRefs: [String]? = nil, encapsulatedByRef: String? = nil, isActive: Bool? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2143,7 +2143,7 @@ public struct NetworkTraffic: STIXObservableProtocol, Equatable {
 public struct Process: STIXObservableProtocol, Equatable {
     public static let stixType = "process"
     public var type: String = "process"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2161,7 +2161,7 @@ public struct Process: STIXObservableProtocol, Equatable {
     public var parentRef: String?
     public var childRefs: [String]?
 
-    public init(type: String = "process", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, isHidden: Bool? = nil, pid: Int? = nil, createdTime: Date? = nil, cwd: String? = nil, commandLine: String? = nil, environmentVariables: [String: STIXValue]? = nil, openedConnectionRefs: [String]? = nil, creatorUserRef: String? = nil, imageRef: String? = nil, parentRef: String? = nil, childRefs: [String]? = nil) {
+    public init(type: String = "process", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, isHidden: Bool? = nil, pid: Int? = nil, createdTime: Date? = nil, cwd: String? = nil, commandLine: String? = nil, environmentVariables: [String: STIXValue]? = nil, openedConnectionRefs: [String]? = nil, creatorUserRef: String? = nil, imageRef: String? = nil, parentRef: String? = nil, childRefs: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2208,7 +2208,7 @@ public struct Process: STIXObservableProtocol, Equatable {
 public struct Software: STIXObservableProtocol, Equatable {
     public static let stixType = "software"
     public var type: String = "software"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2221,7 +2221,7 @@ public struct Software: STIXObservableProtocol, Equatable {
     public var vendor: String?
     public var version: String?
 
-    public init(type: String = "software", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, name: String, cpe: String? = nil, swid: String? = nil, languages: [String]? = nil, vendor: String? = nil, version: String? = nil) {
+    public init(type: String = "software", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, name: String, cpe: String? = nil, swid: String? = nil, languages: [String]? = nil, vendor: String? = nil, version: String? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2258,7 +2258,7 @@ public struct Software: STIXObservableProtocol, Equatable {
 public struct Url: STIXObservableProtocol, Equatable {
     public static let stixType = "url"
     public var type: String = "url"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2266,7 +2266,7 @@ public struct Url: STIXObservableProtocol, Equatable {
     public var extensions: [String: STIXValue]?
     public var value: STIXValue
 
-    public init(type: String = "url", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: STIXValue) {
+    public init(type: String = "url", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, value: STIXValue) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2293,7 +2293,7 @@ public struct Url: STIXObservableProtocol, Equatable {
 public struct UserAccount: STIXObservableProtocol, Equatable {
     public static let stixType = "user-account"
     public var type: String = "user-account"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2314,7 +2314,7 @@ public struct UserAccount: STIXObservableProtocol, Equatable {
     public var accountFirstLogin: Date?
     public var accountLastLogin: Date?
 
-    public init(type: String = "user-account", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, userId: String? = nil, credential: String? = nil, accountLogin: String? = nil, accountType: String? = nil, displayName: String? = nil, isServiceAccount: Bool? = nil, isPrivileged: Bool? = nil, canEscalatePrivs: Bool? = nil, isDisabled: Bool? = nil, accountCreated: Date? = nil, accountExpires: Date? = nil, credentialLastChanged: Date? = nil, accountFirstLogin: Date? = nil, accountLastLogin: Date? = nil) {
+    public init(type: String = "user-account", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, userId: String? = nil, credential: String? = nil, accountLogin: String? = nil, accountType: String? = nil, displayName: String? = nil, isServiceAccount: Bool? = nil, isPrivileged: Bool? = nil, canEscalatePrivs: Bool? = nil, isDisabled: Bool? = nil, accountCreated: Date? = nil, accountExpires: Date? = nil, credentialLastChanged: Date? = nil, accountFirstLogin: Date? = nil, accountLastLogin: Date? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2367,7 +2367,7 @@ public struct UserAccount: STIXObservableProtocol, Equatable {
 public struct WindowsRegistryKey: STIXObservableProtocol, Equatable {
     public static let stixType = "windows-registry-key"
     public var type: String = "windows-registry-key"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2379,7 +2379,7 @@ public struct WindowsRegistryKey: STIXObservableProtocol, Equatable {
     public var creatorUserRef: String?
     public var numberOfSubkeys: Int?
 
-    public init(type: String = "windows-registry-key", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, key: String? = nil, values: [STIXValue]? = nil, modifiedTime: Date? = nil, creatorUserRef: String? = nil, numberOfSubkeys: Int? = nil) {
+    public init(type: String = "windows-registry-key", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, key: String? = nil, values: [STIXValue]? = nil, modifiedTime: Date? = nil, creatorUserRef: String? = nil, numberOfSubkeys: Int? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2414,7 +2414,7 @@ public struct WindowsRegistryKey: STIXObservableProtocol, Equatable {
 public struct X509Certificate: STIXObservableProtocol, Equatable {
     public static let stixType = "x509-certificate"
     public var type: String = "x509-certificate"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var objectMarkingRefs: [STIXIdentifier]?
     public var granularMarkings: [GranularMarking]?
     public var defanged: Bool?
@@ -2434,7 +2434,7 @@ public struct X509Certificate: STIXObservableProtocol, Equatable {
     public var subjectPublicKeyExponent: Int?
     public var x509V3Extensions: STIXValue?
 
-    public init(type: String = "x509-certificate", specVersion: STIXSpecificationVersion = .v21, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, isSelfSigned: Bool? = nil, hashes: [String: STIXValue]? = nil, version: String? = nil, serialNumber: String? = nil, signatureAlgorithm: String? = nil, issuer: String? = nil, validityNotBefore: Date? = nil, validityNotAfter: Date? = nil, subject: String? = nil, subjectPublicKeyAlgorithm: String? = nil, subjectPublicKeyModulus: String? = nil, subjectPublicKeyExponent: Int? = nil, x509V3Extensions: STIXValue? = nil) {
+    public init(type: String = "x509-certificate", specVersion: String = "2.1", objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, defanged: Bool? = nil, id: STIXIdentifier, extensions: [String: STIXValue]? = nil, isSelfSigned: Bool? = nil, hashes: [String: STIXValue]? = nil, version: String? = nil, serialNumber: String? = nil, signatureAlgorithm: String? = nil, issuer: String? = nil, validityNotBefore: Date? = nil, validityNotAfter: Date? = nil, subject: String? = nil, subjectPublicKeyAlgorithm: String? = nil, subjectPublicKeyModulus: String? = nil, subjectPublicKeyExponent: Int? = nil, x509V3Extensions: STIXValue? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.objectMarkingRefs = objectMarkingRefs
@@ -2504,7 +2504,7 @@ public struct Bundle: Codable, Sendable, Equatable {
 public struct LanguageContent: STIXObjectProtocol, Equatable {
     public static let stixType = "language-content"
     public var type: String = "language-content"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -2521,7 +2521,7 @@ public struct LanguageContent: STIXObjectProtocol, Equatable {
     public var objectModified: Date?
     public var contents: [String: STIXValue]
 
-    public init(type: String = "language-content", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, objectRef: STIXIdentifier, objectModified: Date? = nil, contents: [String: STIXValue]) {
+    public init(type: String = "language-content", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, objectRef: STIXIdentifier, objectModified: Date? = nil, contents: [String: STIXValue]) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -2566,7 +2566,7 @@ public struct LanguageContent: STIXObjectProtocol, Equatable {
 public struct MarkingDefinition: STIXObjectProtocol, Equatable {
     public static let stixType = "marking-definition"
     public var type: String = "marking-definition"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var name: String?
     public var createdByRef: STIXIdentifier?
     public var created: String?
@@ -2578,7 +2578,7 @@ public struct MarkingDefinition: STIXObjectProtocol, Equatable {
     public var definitionType: String?
     public var definition: [String: STIXValue]?
 
-    public init(type: String = "marking-definition", specVersion: STIXSpecificationVersion = .v21, name: String? = nil, createdByRef: STIXIdentifier? = nil, created: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, id: STIXIdentifier, definitionType: String? = nil, definition: [String: STIXValue]? = nil) {
+    public init(type: String = "marking-definition", specVersion: String = "2.1", name: String? = nil, createdByRef: STIXIdentifier? = nil, created: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, id: STIXIdentifier, definitionType: String? = nil, definition: [String: STIXValue]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.name = name
@@ -2613,7 +2613,7 @@ public struct MarkingDefinition: STIXObjectProtocol, Equatable {
 public struct ExtensionDefinition: STIXObjectProtocol, Equatable {
     public static let stixType = "extension-definition"
     public var type: String = "extension-definition"
-    public var specVersion: STIXSpecificationVersion = .v21
+    public var specVersion: String = "2.1"
     public var id: STIXIdentifier
     public var createdByRef: STIXIdentifier?
     public var labels: [String]?
@@ -2633,7 +2633,7 @@ public struct ExtensionDefinition: STIXObjectProtocol, Equatable {
     public var extensionTypes: [STIXValue]
     public var extensionProperties: [String]?
 
-    public init(type: String = "extension-definition", specVersion: STIXSpecificationVersion = .v21, id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, schema: String, version: String, extensionTypes: [STIXValue], extensionProperties: [String]? = nil) {
+    public init(type: String = "extension-definition", specVersion: String = "2.1", id: STIXIdentifier, createdByRef: STIXIdentifier? = nil, labels: [String]? = nil, created: Date, modified: Date, revoked: Bool? = nil, confidence: Int? = nil, lang: String? = nil, externalReferences: [ExternalReference]? = nil, objectMarkingRefs: [STIXIdentifier]? = nil, granularMarkings: [GranularMarking]? = nil, extensions: [String: STIXValue]? = nil, name: String, description: String? = nil, schema: String, version: String, extensionTypes: [STIXValue], extensionProperties: [String]? = nil) {
         self.type = type
         self.specVersion = specVersion
         self.id = id
@@ -2841,7 +2841,7 @@ public enum STIXObservable: Codable, Sendable, Equatable {
         }
     }
 
-    public var specVersion: STIXSpecificationVersion? {
+    public var specVersion: String? {
         return switch self {
             case .artifact(let value): value.specVersion
             case .autonomousSystem(let value): value.specVersion

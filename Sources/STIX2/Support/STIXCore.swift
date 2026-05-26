@@ -12,11 +12,6 @@ public struct STIXIdentifier: RawRepresentable, Codable, Sendable, Hashable, Exp
     }
 }
 
-public enum STIXSpecificationVersion: String, Codable, Sendable, CaseIterable {
-    case v20 = "2.0"
-    case v21 = "2.1"
-}
-
 public protocol STIXObjectProtocol: Codable, Sendable {
     static var stixType: String { get }
     var type: String { get set }
@@ -27,7 +22,7 @@ public protocol STIXObservableProtocol: Codable, Sendable {
     static var stixType: String { get }
     var type: String { get set }
     var id: STIXIdentifier { get set }
-    var specVersion: STIXSpecificationVersion { get set }
+    var specVersion: String { get set }
 }
 
 public struct ExternalReference: Codable, Sendable, Equatable {
@@ -214,13 +209,13 @@ public enum STIXJSON {
 
 public struct CustomObject: Codable, Sendable, Equatable {
     public var type: String
-    public var specVersion: STIXSpecificationVersion?
+    public var specVersion: String?
     public var id: STIXIdentifier
     public var properties: [String: STIXValue]
 
     public init(
         type: String,
-        specVersion: STIXSpecificationVersion? = nil,
+        specVersion: String? = nil,
         id: STIXIdentifier,
         properties: [String: STIXValue] = [:]
     ) {
@@ -235,7 +230,7 @@ public struct CustomObject: Codable, Sendable, Equatable {
         let type = try container.decode(String.self, forKey: DynamicCodingKey("type"))
         let id = try container.decode(STIXIdentifier.self, forKey: DynamicCodingKey("id"))
         let specVersion = try container.decodeIfPresent(
-            STIXSpecificationVersion.self,
+            String.self,
             forKey: DynamicCodingKey("spec_version")
         )
 
@@ -260,13 +255,13 @@ public struct CustomObject: Codable, Sendable, Equatable {
 
 public struct CustomObservable: Codable, Sendable, Equatable {
     public var type: String
-    public var specVersion: STIXSpecificationVersion
+    public var specVersion: String
     public var id: STIXIdentifier
     public var properties: [String: STIXValue]
 
     public init(
         type: String,
-        specVersion: STIXSpecificationVersion = .v21,
+        specVersion: String = "2.1",
         id: STIXIdentifier,
         properties: [String: STIXValue] = [:]
     ) {
@@ -281,9 +276,9 @@ public struct CustomObservable: Codable, Sendable, Equatable {
         let type = try container.decode(String.self, forKey: DynamicCodingKey("type"))
         let id = try container.decode(STIXIdentifier.self, forKey: DynamicCodingKey("id"))
         let specVersion = try container.decodeIfPresent(
-            STIXSpecificationVersion.self,
+            String.self,
             forKey: DynamicCodingKey("spec_version")
-        ) ?? .v21
+        ) ?? "2.1"
 
         var properties = try [String: STIXValue](from: decoder)
         properties.removeValue(forKey: "type")
