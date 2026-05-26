@@ -117,15 +117,16 @@ Pulsedive currently provides a free test collection that is useful for client in
 import STIX2
 
 let client = TAXIIClient(configuration: .pulsediveTest(apiKey: "<YOUR_API_KEY>"))
+
 let envelope = try await client.objects(
     collectionID: TAXIIClientConfiguration.pulsediveTestCollectionID,
     query: TAXIIObjectQuery(limit: 10, matchType: "indicator")
 )
 
-for object in envelope.objects {
-    if case let .indicator(indicator) = object {
-        print(indicator.name ?? "<unnamed indicator>")
-    }
+for obj in envelope.objects {
+     if case let .indicator(indicator) = obj.object {
+         print(indicator.name ?? "<unnamed indicator>")
+     }
 }
 ```
 
