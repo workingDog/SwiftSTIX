@@ -6,9 +6,13 @@ It is designed for:
 
 - decoding and encoding STIX 2.1 JSON in native Swift types
 - consuming TAXII 2.1 collections from Swift apps and services
-- testing TAXII clients against real-world feeds such as Pulsedive and CVEdetails
+- testing TAXII clients against real-world feeds such as Pulsedive
 
-The package currently ships a single module, `STIX2`.
+The package ships as a single module, `STIX2`.
+
+
+An experiment to use **Codex AI** to generate the code, then some polishing.
+
 
 ## Features
 
@@ -21,7 +25,9 @@ The package currently ships a single module, `STIX2`.
 
 ## Status
 
-This package is usable today for STIX 2.1 decoding and TAXII 2.1 client integration, but it is still early-stage:
+Minimal testing as yet. 
+
+This package should be usable for STIX 2.1 decoding and TAXII 2.1 client integration, but it is still early-stage:
 
 - focus is currently on STIX 2.1
 - schema-backed models are present for standard SDO, SRO, and SCO types
@@ -132,15 +138,6 @@ for object in envelope.objects {
   TAXII 2.1 client support
 - [`Tests/STIX2Tests/STIX2Tests.swift`](Tests/STIX2Tests/STIX2Tests.swift)
   Decoding and request-construction coverage
-
-## Tested Endpoints
-
-These are the endpoints currently reflected in code examples or helper configs:
-
-- Pulsedive TAXII test feed
-- CVEdetails TAXII 2.1 feed
-
-Endpoint behavior can change over time, so treat these as convenience integrations rather than permanent guarantees.
 
 ## Data Sources
 
