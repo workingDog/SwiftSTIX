@@ -83,8 +83,8 @@ let data: Data = ...
 let decoder = STIXJSON.makeDecoder()
 let bundle = try decoder.decode(Bundle.self, from: data)
 
-for object in bundle.objects ?? [] {
-    switch object {
+for obj in bundle.objects ?? [] {
+    switch obj.object {
     case .indicator(let indicator):
         print("Indicator:", indicator.name ?? "<unnamed>")
     case .relationship(let relationship):
