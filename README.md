@@ -33,7 +33,7 @@ This package is usable today for STIX 2.1 decoding and TAXII 2.1 client integrat
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/<your-org>/SwiftSTIX.git", from: "0.1.0")
+    .package(url: "https://github.com/workingDog/SwiftSTIX.git", from: "0.1.0")
 ]
 ```
 
@@ -108,18 +108,6 @@ for object in envelope.objects {
         print(indicator.name ?? "<unnamed indicator>")
     }
 }
-```
-
-### Read from CVEdetails
-
-CVEdetails documents a public TAXII 2.1 discovery endpoint and API root for CVE-oriented STIX content.
-
-```swift
-import STIX2
-
-let client = TAXIIClient(configuration: .cveDetails())
-let collections = try await client.collections()
-print(collections.map(\.title))
 ```
 
 ## Public API Highlights
