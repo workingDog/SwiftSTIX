@@ -14,6 +14,19 @@ The package ships as a single module, `STIX2`.
 An experiment to use **Codex AI** to generate the code, then some polishing.
 
 
+## STIX and TAXII
+
+[[1]](https://oasis-open.github.io/cti-documentation/) 
+"Structured Threat Information Expression [STIX™] 
+is a language and serialization format 
+used to exchange [cyber threat intelligence (CTI)](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti). STIX enables organizations to share 
+CTI with one another in a consistent and machine readable manner, allowing security 
+communities to better understand what computer-based attacks they are most likely to 
+see and to anticipate and/or respond to those attacks faster and more effectively. 
+STIX is designed to improve many different capabilities, such as collaborative 
+threat analysis, automated threat exchange, automated detection and response, and more."
+
+
 ## Features
 
 - Swift 6 package with `Codable` STIX 2.1 models
@@ -145,6 +158,9 @@ The model layer was originally derived from:
 
 - [`oasis-open/cti-python-stix2`](https://github.com/oasis-open/cti-python-stix2)
 - [`oasis-open/cti-stix2-json-schemas`](https://github.com/oasis-open/cti-stix2-json-schemas)
+
+- [STIX 2.0 Specifications](https://oasis-open.github.io/cti-documentation/)
+- [TAXII 2.1 Specification](https://oasis-open.github.io/cti-documentation/)
 
 ## Development
 
