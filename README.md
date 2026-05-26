@@ -152,7 +152,8 @@ for object in envelope.objects {
 - [`Tests/STIX2Tests/STIX2Tests.swift`](Tests/STIX2Tests/STIX2Tests.swift)
   Decoding and request-construction coverage
 
-## Data Sources
+
+## References
 
 The model layer was originally derived from:
 
