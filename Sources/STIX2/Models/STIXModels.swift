@@ -2866,7 +2866,24 @@ public enum STIXObservable: Codable, Sendable, Equatable {
     }
 }
 
-public enum STIXObject: Codable, Sendable, Equatable {
+public struct STIXObject: Codable, Sendable, Equatable, Identifiable {
+    public let id: UUID = UUID()
+    public let object: STIXObjectKind
+
+    public init(object: STIXObjectKind) {
+        self.object = object
+    }
+
+    public init(from decoder: Decoder) throws {
+        self.object = try STIXObjectKind(from: decoder)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        try object.encode(to: encoder)
+    }
+}
+
+public enum STIXObjectKind: Codable, Sendable, Equatable {
     case attackPattern(AttackPattern)
     case campaign(Campaign)
     case courseOfAction(CourseOfAction)
@@ -3039,7 +3056,7 @@ public enum STIXObject: Codable, Sendable, Equatable {
         }
     }
 
-    public var id: STIXIdentifier {
+    public var stixID: STIXIdentifier {
         return switch self {
             case .attackPattern(let value): value.id
             case .campaign(let value): value.id
