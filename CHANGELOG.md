@@ -6,5 +6,5 @@
 - STIX 2.1 model layer for standard domain, relationship, and observable objects
 - `STIXObject` and `STIXObservable` polymorphic decoding
 - TAXII 2.1 client support for discovery, collections, and objects
-- Pulsedive and CVEdetails helper configurations
+- Pulsedive helper configurations
 - Test coverage for bundle decoding, observable dictionaries, TAXII envelopes, and request construction
