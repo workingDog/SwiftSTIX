@@ -5,7 +5,7 @@ public struct TAXIIServerInfo: Codable, Sendable, Equatable {
     public var description: String?
     public var defaultAPI: String?
     public var apiRoots: [String]?
-    public var versions: [String]
+    public var versions: [String]?
     public var maxContentLength: Int?
 
     public init(
@@ -13,7 +13,7 @@ public struct TAXIIServerInfo: Codable, Sendable, Equatable {
         description: String? = nil,
         defaultAPI: String? = nil,
         apiRoots: [String]? = nil,
-        versions: [String],
+        versions: [String]? = nil,
         maxContentLength: Int? = nil
     ) {
         self.title = title
@@ -27,9 +27,9 @@ public struct TAXIIServerInfo: Codable, Sendable, Equatable {
     enum CodingKeys: String, CodingKey {
         case title
         case description
+        case versions
         case defaultAPI = "default"
         case apiRoots = "api_roots"
-        case versions
         case maxContentLength = "max_content_length"
     }
 }
@@ -101,7 +101,7 @@ public struct TAXIIEnvelope: Codable, Sendable, Equatable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.more = try container.decodeIfPresent(Bool.self, forKey: .more)
         self.objects = try container.decode([STIXObject].self, forKey: .objects )
-        // next can be either String or Int
+        // next should be a String but sometimes it is given as an Int
         if let stringValue = try container.decodeIfPresent(String.self, forKey: .next) {
             self.next = stringValue
         } else if let intValue = try container.decodeIfPresent(Int.self, forKey: .next) {

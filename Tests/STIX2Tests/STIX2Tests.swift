@@ -51,7 +51,7 @@ func decodesUpstreamRelationshipBundle() throws {
     #expect(bundle.type == "bundle")
     #expect(bundle.objects?.count == 3)
 
-    guard case let .relationship(relationship)? = bundle.objects?.last else {
+    guard case let .relationship(relationship)? = bundle.objects?.last?.object else {
         Issue.record("Expected the third object to decode as a relationship")
         return
     }
@@ -108,7 +108,7 @@ func decodesObservedDataWithObservableDictionary() throws {
 func roundTripsCustomObject() throws {
     let payload = CustomObject(
         type: "x-acme-analytic",
-        specVersion: .v21,
+        specVersion: "2.1",
         id: "x-acme-analytic--44444444-4444-4444-8444-444444444444",
         properties: [
             "score": .int(98),
@@ -197,7 +197,7 @@ func decodesTaxiiEnvelopeWithIdentityAndIndicator() throws {
     #expect(envelope.more == false)
     #expect(envelope.objects.count == 2)
 
-    guard case let .indicator(indicator) = envelope.objects[1] else {
+    guard case let .indicator(indicator) = envelope.objects[1].object else {
         Issue.record("Expected second TAXII object to decode as a STIX indicator")
         return
     }
