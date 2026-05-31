@@ -52,7 +52,7 @@ This package should be usable for STIX 2.1 decoding and TAXII 2.1 client integra
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/workingDog/SwiftSTIX.git", from: "0.1.0")
+    .package(url: "https://github.com/workingDog/SwiftSTIX.git", branch: "main")
 ]
 ```
 
